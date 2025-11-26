@@ -67,9 +67,11 @@ src/
 ## Pré-requisitos
 
 ### Para Execução Local
+
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) instalado
 
 ### Para Execução com Docker
+
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado
 - Docker Compose (incluído no Docker Desktop)
 
