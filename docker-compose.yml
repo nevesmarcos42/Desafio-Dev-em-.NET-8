@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  desafio-dev-net8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: desafio-dev-net8-app
+    image: desafio-dev-net8:latest
+    stdin_open: true
+    tty: true
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    volumes:
+      - ./data:/app/data
+    networks:
+      - desafio-network
+
+networks:
+  desafio-network:
+    driver: bridge

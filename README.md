@@ -58,35 +58,85 @@ src/
 
 - **.NET 8**: Framework principal
 - **C#**: Linguagem de programação
+- **Docker**: Containerização da aplicação
+- **Docker Compose**: Orquestração de containers
 - **Dependency Injection**: Injeção de dependências nativa do .NET
 - **Repository Pattern**: Padrão de projeto para acesso a dados
 - **Clean Architecture**: Arquitetura em camadas com separação de responsabilidades
 
 ## Pré-requisitos
 
+### Para Execução Local
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) instalado
+
+### Para Execução com Docker
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado
+- Docker Compose (incluído no Docker Desktop)
 
 ## Como Executar
 
-### 1. Clone o repositório (ou baixe o código)
+### Opção 1: Docker Compose (Recomendado) 🐳
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/nevesmarcos42/Desafio-Dev-em-.NET-8.git
+cd Desafio-Dev-em-.NET-8
+```
+
+2. **Build e execute com Docker Compose:**
+
+```bash
+docker-compose up --build
+```
+
+3. **Para modo interativo (permite interação com o menu):**
+
+```bash
+docker-compose run --rm desafio-dev-net8
+```
+
+4. **Para parar os containers:**
+
+```bash
+docker-compose down
+```
+
+### Opção 2: Docker Manual
+
+1. **Build da imagem:**
+
+```bash
+docker build -t desafio-dev-net8:latest .
+```
+
+2. **Execute o container:**
+
+```bash
+docker run -it --rm desafio-dev-net8:latest
+```
+
+### Opção 3: Execução Local
+
+1. **Clone o repositório (ou baixe o código):**
 
 ```bash
 cd Desafio-Dev-em-.NET-8
 ```
 
-### 2. Restaure as dependências
+2. **Restaure as dependências:**
 
 ```bash
 dotnet restore
 ```
 
-### 3. Compile o projeto
+3. **Compile o projeto:**
 
 ```bash
 dotnet build
 ```
 
-### 4. Execute a aplicação
+4. **Execute a aplicação:**
 
 ```bash
 dotnet run --project src/DesafioDevNet8.Presentation/DesafioDevNet8.Presentation.csproj
